@@ -2,6 +2,7 @@
     require '../models/form.php';
     
     $errors = "";
+    $insert = false;
 
     if ( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES) ) {
         # extract data
@@ -16,7 +17,7 @@
 
         # validate text and desc
         if ( empty($title) || empty($desc)) {
-            $errors .= "<li>Por favor complete los campos correctamente.</li>";
+            $errors = "<li>Por favor complete los campos correctamente.</li>";
         } 
 
         # validate file
@@ -33,7 +34,7 @@
 
         # insert in db
         if ( empty($errors) ) {
-            insert_data($name,$title,$desc);
+            $insert = insert_data($name,$title,$desc);
         }
     }
 
@@ -45,9 +46,5 @@
         return $str;
     }
 
-    function show_errors(string $errors): void{
-        echo $errors;
-    }
-    
     require '../views/form.php';
 ?>

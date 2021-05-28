@@ -1,4 +1,5 @@
 <?php  
+    require '../vendor/autoload.php';
     require '../libs/connection_db.php';
 
     function insert_data( string $img, string $title, string $desc ): bool {

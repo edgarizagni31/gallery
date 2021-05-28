@@ -1,3 +1,5 @@
 <?php
-    require 'views/gallery.php';
+    require 'vendor/autoload.php';
+
+    require 'controllers/gallery.php';
 ?>
