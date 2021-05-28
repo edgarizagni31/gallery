@@ -4,3 +4,5 @@ vendor/
 # misc 
 .env
 assets/
+upload/
+upload/images
