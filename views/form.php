@@ -10,6 +10,7 @@
 <body>
     <div class="container">
         <button class="container__button">
+            <i class="fas fa-long-arrow-alt-left icon"></i>
             <a href="../index.php">Ver galeria</a>
         </button>
         <form 

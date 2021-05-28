@@ -29,3 +29,39 @@ img {
 .icon {
     color: #ffffff;
 }
+
+@media screen and ( min-width: 592px) and (max-width: 992px ) {
+    .button {
+        margin-top: 20px;
+        width: 40%;
+    }
+}
+
+@media screen and ( min-width: 360px ) and ( max-width: 592px ) {
+    .gallery {
+        grid-template-columns:repeat(2,1fr);
+    }
+    
+    img {
+        width: 100%;
+    }
+
+    .button {
+        width: 30%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and  ( max-width: 360px ) {
+    .gallery {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .button {
+        width: 50%;
+    }
+}
